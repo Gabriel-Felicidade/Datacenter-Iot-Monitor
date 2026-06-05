@@ -1,0 +1,787 @@
+[
+    {
+        "id": "1819c250933b64f5",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d5a15cce9d06fb9b",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "6286f8964c8feecb",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6"
+        }
+    },
+    {
+        "id": "2f80076e1c1cd91b",
+        "type": "ui_tab",
+        "name": "Data Center Monitor",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "327e4a4f240f2bd2",
+        "type": "ui_group",
+        "name": "Telemetria (Sensores)",
+        "tab": "2f80076e1c1cd91b",
+        "order": 1,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "734efa31f1a42b95",
+        "type": "ui_group",
+        "name": "Controles e Logs",
+        "tab": "2f80076e1c1cd91b",
+        "order": 3,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "cbc62b9894856c30",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#a3a3a3",
+                "baseFont": "Arial Black,Arial Black,Gadget,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#34a2a8",
+                "baseFont": "Arial Black,Arial Black,Gadget,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#92b4d3",
+                "baseFont": "Arial Black,Arial Black,Gadget,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#34a2a8",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#34a2a8",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": true
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#5cc7cd",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#34a2a8",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "Arial Black,Arial Black,Gadget,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "5c798b1f67fe13f8",
+        "type": "ui_group",
+        "d": true,
+        "name": "Default",
+        "tab": "2f80076e1c1cd91b",
+        "order": 4,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5446a2363d33f6fc",
+        "type": "ui_group",
+        "name": "Histórico",
+        "tab": "2f80076e1c1cd91b",
+        "order": 6,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4bab96ba8a7ec4d5",
+        "type": "ui_group",
+        "name": "Histórico",
+        "tab": "2f80076e1c1cd91b",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ef69b063e394e879",
+        "type": "ui_group",
+        "name": "Controle do Exaustor",
+        "tab": "2f80076e1c1cd91b",
+        "order": 5,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6ba3cb38679a52e6",
+        "type": "ui_group",
+        "name": "Histórico",
+        "tab": "2f80076e1c1cd91b",
+        "order": 2,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "60cc50805e4412e6",
+        "type": "ui_group",
+        "name": "Histórico",
+        "tab": "2f80076e1c1cd91b",
+        "order": 2,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "78ca73a459c5e6bb",
+        "type": "ui_group",
+        "name": "Histórico",
+        "tab": "2f80076e1c1cd91b",
+        "order": 2,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2386852166a3b2e4",
+        "type": "ui_group",
+        "name": "HISTÓRICO — ÚLTIMAS 24H",
+        "tab": "2f80076e1c1cd91b",
+        "order": 2,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "70e9bf90b165608a",
+        "type": "ui_group",
+        "name": "Histórico",
+        "tab": "2f80076e1c1cd91b",
+        "order": 2,
+        "disp": false,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "dfd78579eaaaec57",
+        "type": "ui_group",
+        "name": "HISTÓRICO — ÚLTIMAS 24H",
+        "tab": "2f80076e1c1cd91b",
+        "order": 2,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "289358bd9e70b8de",
+        "type": "ui_group",
+        "name": "Histórico",
+        "tab": "2f80076e1c1cd91b",
+        "order": 2,
+        "disp": false,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "64115814b28566cf",
+        "type": "ui_group",
+        "name": "HISTÓRICO — ÚLTIMAS 24H",
+        "tab": "2f80076e1c1cd91b",
+        "order": 2,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8f9d1ebd51c0b37d",
+        "type": "ui_group",
+        "name": "Histórico",
+        "tab": "2f80076e1c1cd91b",
+        "order": 2,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f90cdfe11a8c5eee",
+        "type": "mqtt in",
+        "z": "1819c250933b64f5",
+        "name": "",
+        "topic": "cloudtech/datacenter/monitor",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "d5a15cce9d06fb9b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 120,
+        "wires": [
+            [
+                "466635a38cba8089"
+            ]
+        ]
+    },
+    {
+        "id": "466635a38cba8089",
+        "type": "json",
+        "z": "1819c250933b64f5",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 410,
+        "y": 120,
+        "wires": [
+            [
+                "fb8bff29c53efe4a",
+                "b07d6b1a5f47f424",
+                "960e59eb6471a182",
+                "8d7daa6062d528c0"
+            ]
+        ]
+    },
+    {
+        "id": "fb8bff29c53efe4a",
+        "type": "debug",
+        "z": "1819c250933b64f5",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "c2740b09f019ccc4",
+        "type": "ui_gauge",
+        "z": "1819c250933b64f5",
+        "name": "",
+        "group": "327e4a4f240f2bd2",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura Atual",
+        "label": "°C",
+        "format": "{{value}} °C",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00e5b0",
+            "#f0c040",
+            "#ff3860"
+        ],
+        "seg1": "24",
+        "seg2": "28",
+        "diff": false,
+        "className": "",
+        "x": 1030,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "b07d6b1a5f47f424",
+        "type": "change",
+        "z": "1819c250933b64f5",
+        "name": "condicao de temperatura",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.temperatura",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 180,
+        "wires": [
+            [
+                "c2740b09f019ccc4",
+                "a147797422acf4da"
+            ]
+        ]
+    },
+    {
+        "id": "960e59eb6471a182",
+        "type": "change",
+        "z": "1819c250933b64f5",
+        "name": "condicao de umidade",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.umidade",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 240,
+        "wires": [
+            [
+                "d83c91190ea89d0a",
+                "4d584eef29cb1cdc"
+            ]
+        ]
+    },
+    {
+        "id": "a147797422acf4da",
+        "type": "ui_chart",
+        "z": "1819c250933b64f5",
+        "name": "",
+        "group": "2386852166a3b2e4",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Histórico de Telemetria (Temperatura)",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 24,
+        "removeOlderPoints": "10",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#00b4d8",
+            "#00e5b0",
+            "#ff3860",
+            "#f0c040",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1310,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "20dc1181fd9aee39",
+        "type": "ui_switch",
+        "z": "1819c250933b64f5",
+        "name": "",
+        "label": "Ativação Manual do Exaustor",
+        "tooltip": "",
+        "group": "734efa31f1a42b95",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "fa-fan",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "fa-fan",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 200,
+        "y": 260,
+        "wires": [
+            [
+                "9135dd454388b4a6",
+                "922b29287a178e94"
+            ]
+        ]
+    },
+    {
+        "id": "9135dd454388b4a6",
+        "type": "mqtt out",
+        "z": "1819c250933b64f5",
+        "name": "",
+        "topic": "cloudtech/datacenter/cmd",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d5a15cce9d06fb9b",
+        "x": 470,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "1f6fb90d50f57fc2",
+        "type": "ui_text",
+        "z": "1819c250933b64f5",
+        "group": "734efa31f1a42b95",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Último Evento Registrado:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 930,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "922b29287a178e94",
+        "type": "change",
+        "z": "1819c250933b64f5",
+        "name": "Log Comando Manual",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Exaustor alterado manualmente",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 320,
+        "wires": [
+            [
+                "1f6fb90d50f57fc2"
+            ]
+        ]
+    },
+    {
+        "id": "8d7daa6062d528c0",
+        "type": "change",
+        "z": "1819c250933b64f5",
+        "name": "Filtro Status Exaustor",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.exaustor",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 300,
+        "wires": [
+            [
+                "96d4e8a85af29cca"
+            ]
+        ]
+    },
+    {
+        "id": "96d4e8a85af29cca",
+        "type": "switch",
+        "z": "1819c250933b64f5",
+        "name": "ON / OFF",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ON",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "OFF",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 980,
+        "y": 300,
+        "wires": [
+            [
+                "6e932ed25dfccb75"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "6e932ed25dfccb75",
+        "type": "change",
+        "z": "1819c250933b64f5",
+        "name": "Log Automático",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Alerta local: Automação acionada!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 360,
+        "wires": [
+            [
+                "1f6fb90d50f57fc2"
+            ]
+        ]
+    },
+    {
+        "id": "9939736c0d9212ad",
+        "type": "ui_template",
+        "z": "1819c250933b64f5",
+        "group": "327e4a4f240f2bd2",
+        "name": "Custom CSS",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap');\n\n/* ═══ GLOBAL RESET ═══ */\n*, *::before, *::after { box-sizing: border-box; }\n\nbody, .nr-dashboard-theme {\n    font-family: 'Rajdhani', 'Segoe UI', sans-serif !important;\n    background-color: #020617 !important;\n    background-image:\n        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0,180,216,0.12) 0%, transparent 60%),\n        radial-gradient(ellipse 40% 40% at 80% 80%, rgba(0,229,176,0.06) 0%, transparent 50%),\n        linear-gradient(180deg, #020617 0%, #040c1f 100%) !important;\n}\n\n/* ═══ TOP BAR ═══ */\nmd-toolbar, .md-toolbar-tools {\n    background: linear-gradient(90deg, #020617 0%, #051030 60%, #020617 100%) !important;\n    border-bottom: 1px solid rgba(0,180,216,0.3) !important;\n    box-shadow: 0 0 30px rgba(0,180,216,0.1) !important;\n}\nmd-toolbar h1, .md-toolbar-tools span {\n    font-family: 'Rajdhani', sans-serif !important;\n    font-weight: 700 !important;\n    font-size: 17px !important;\n    letter-spacing: 3px !important;\n    text-transform: uppercase !important;\n    color: #e0f7ff !important;\n    text-shadow: 0 0 20px rgba(0,180,216,0.6) !important;\n}\n\n/* ═══ CARDS ═══ */\nmd-card {\n    background: linear-gradient(135deg, #060d1f 0%, #0a1528 100%) !important;\n    border-radius: 12px !important;\n    border: 1px solid rgba(0,180,216,0.18) !important;\n    box-shadow:\n        0 0 0 1px rgba(0,180,216,0.05),\n        0 8px 32px rgba(0,0,0,0.6),\n        inset 0 1px 0 rgba(255,255,255,0.04) !important;\n    margin: 8px !important;\n    overflow: hidden;\n    transition: border-color 0.3s ease, box-shadow 0.3s ease;\n    position: relative;\n}\nmd-card::before {\n    content: '';\n    position: absolute;\n    top: 0; left: 0; right: 0;\n    height: 1px;\n    background: linear-gradient(90deg, transparent, rgba(0,180,216,0.5), transparent);\n}\nmd-card:hover {\n    border-color: rgba(0,180,216,0.35) !important;\n    box-shadow:\n        0 0 0 1px rgba(0,180,216,0.1),\n        0 12px 40px rgba(0,0,0,0.7),\n        0 0 20px rgba(0,180,216,0.06) !important;\n}\n\n/* ═══ GROUP HEADERS ═══ */\n.nr-dashboard-cardtitle {\n    color: #7ec8e3 !important;\n    font-family: 'Rajdhani', sans-serif !important;\n    font-size: 11px !important;\n    font-weight: 600 !important;\n    letter-spacing: 3px !important;\n    text-transform: uppercase !important;\n    border-bottom: 1px solid rgba(0,180,216,0.15) !important;\n    padding: 10px 16px 10px !important;\n    margin-bottom: 8px !important;\n    display: flex !important;\n    align-items: center !important;\n    gap: 8px;\n}\n.nr-dashboard-cardtitle::before {\n    content: '';\n    display: inline-block;\n    width: 6px; height: 6px;\n    border-radius: 50%;\n    background: #00b4d8;\n    box-shadow: 0 0 8px #00b4d8;\n    flex-shrink: 0;\n}\n\n/* ═══ GAUGE ═══ */\nnr-gauge, .nr-dashboard-gauge {\n    padding: 8px 0 !important;\n}\n.gauge-value, text.gauge-value {\n    font-family: 'Share Tech Mono', monospace !important;\n    fill: #e0f7ff !important;\n}\ntext { fill: #7ec8e3 !important; font-family: 'Rajdhani', sans-serif !important; }\n\n/* ═══ CHART ═══ */\n.nvd3 text { fill: #4a7fa0 !important; font-family: 'Rajdhani', sans-serif !important; font-size: 11px !important; }\n.nvd3 .nv-axis line, .nvd3 .nv-axis path { stroke: rgba(0,180,216,0.12) !important; }\n.nvd3 .nv-axis .zero line { stroke: rgba(0,180,216,0.2) !important; }\n.nvd3 .nv-legend text { fill: #7ec8e3 !important; font-size: 12px !important; }\n.nvd3 .nv-background rect { fill: transparent !important; }\n\n/* ═══ SWITCH ═══ */\nmd-switch .md-thumb {\n    background-color: #1e3a5f !important;\n    box-shadow: 0 2px 8px rgba(0,0,0,0.4) !important;\n}\nmd-switch.md-checked .md-thumb {\n    background-color: #00b4d8 !important;\n    box-shadow: 0 0 12px rgba(0,180,216,0.5) !important;\n}\nmd-switch .md-bar {\n    background-color: #0e2040 !important;\n    border-radius: 8px !important;\n}\nmd-switch.md-checked .md-bar {\n    background-color: rgba(0,180,216,0.25) !important;\n    border: 1px solid rgba(0,180,216,0.4) !important;\n}\n.nr-dashboard-switch label {\n    color: #cdd6f4 !important;\n    font-family: 'Rajdhani', sans-serif !important;\n    font-size: 15px !important;\n    font-weight: 500 !important;\n    letter-spacing: 0.5px !important;\n}\n\n/* ═══ LOG / TEXT WIDGET ═══ */\n.nr-dashboard-text {\n    font-family: 'Share Tech Mono', monospace !important;\n    font-size: 13px !important;\n    color: #00e5b0 !important;\n    text-shadow: 0 0 10px rgba(0,229,176,0.4) !important;\n    letter-spacing: 0.5px !important;\n    padding: 4px 8px;\n    background: rgba(0,229,176,0.05);\n    border-left: 2px solid rgba(0,229,176,0.4);\n    border-radius: 0 4px 4px 0;\n}\n.nr-dashboard-text-label {\n    color: #4a7fa0 !important;\n    font-family: 'Rajdhani', sans-serif !important;\n    font-size: 12px !important;\n    font-weight: 600 !important;\n    letter-spacing: 1px !important;\n    text-transform: uppercase !important;\n}\n\n/* ═══ SCROLLBAR ═══ */\n::-webkit-scrollbar { width: 4px; background: #020617; }\n::-webkit-scrollbar-thumb { background: rgba(0,180,216,0.3); border-radius: 2px; }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "global",
+        "className": "",
+        "x": 200,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d83c91190ea89d0a",
+        "type": "ui_gauge",
+        "z": "1819c250933b64f5",
+        "name": "Gauge Umidade",
+        "group": "327e4a4f240f2bd2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Umidade Relativa",
+        "label": "%",
+        "format": "{{value}} %",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ff3860",
+            "#f0c040",
+            "#00e5b0"
+        ],
+        "seg1": "30",
+        "seg2": "60",
+        "diff": false,
+        "className": "",
+        "x": 1000,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "4d584eef29cb1cdc",
+        "type": "ui_chart",
+        "z": "1819c250933b64f5",
+        "name": "",
+        "group": "64115814b28566cf",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Histórico de Telemetria (Umidade)",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 24,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#00b4d8",
+            "#00e5b0",
+            "#ff3860",
+            "#f0c040",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1260,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    }
+]
